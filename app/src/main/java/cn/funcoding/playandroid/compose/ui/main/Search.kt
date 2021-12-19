@@ -11,7 +11,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import cn.funcoding.playandroid.compose.R
-import cn.funcoding.playandroid.compose.model.SnackbarManager
+import cn.funcoding.playandroid.compose.utils.SnackbarManager
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidSurface
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 

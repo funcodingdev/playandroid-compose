@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.SnackbarHost
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -50,7 +51,7 @@ fun PlayAndroidApp() {
                     modifier = Modifier.padding(innerPaddingModifier)
                 ) {
                     playAndroidNavGraph(
-                        onItemSelected = appStateHolder::navigateToSnackDetail,
+                        onItemSelected = appStateHolder::navigateToArticleDetail,
                         upPress = appStateHolder::upPress
                     )
                 }
@@ -65,7 +66,7 @@ private fun NavGraphBuilder.playAndroidNavGraph(
 ) {
     navigation(
         route = MainDestinations.MAIN_ROUTE,
-        startDestination = MainSections.HOME.route
+        startDestination = MainSections.MINE.route
     ) {
         addMainGraph(onItemSelected)
     }
@@ -77,4 +78,10 @@ private fun NavGraphBuilder.playAndroidNavGraph(
         val articleId = arguments.getLong(MainDestinations.ARTICLE_ID_KEY)
 //        SnackDetail(snackId, upPress)
     }
+}
+
+@Preview
+@Composable
+private fun PlayAndroidAppPreview() {
+    PlayAndroidApp()
 }

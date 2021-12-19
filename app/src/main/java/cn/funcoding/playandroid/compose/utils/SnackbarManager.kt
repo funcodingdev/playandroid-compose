@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.model
+package cn.funcoding.playandroid.compose.utils
 
 import androidx.annotation.StringRes
 import java.util.UUID

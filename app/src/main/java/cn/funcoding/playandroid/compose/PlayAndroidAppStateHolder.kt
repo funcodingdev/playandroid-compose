@@ -13,7 +13,7 @@ import androidx.navigation.NavGraph
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import cn.funcoding.playandroid.compose.model.SnackbarManager
+import cn.funcoding.playandroid.compose.utils.SnackbarManager
 import cn.funcoding.playandroid.compose.ui.main.MainSections
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -102,7 +102,7 @@ class AppStateHolder(
         }
     }
 
-    fun navigateToSnackDetail(snackId: Long, from: NavBackStackEntry) {
+    fun navigateToArticleDetail(snackId: Long, from: NavBackStackEntry) {
         // In order to discard duplicated navigation events, we check the Lifecycle
         if (from.lifecycleIsResumed()) {
             navController.navigate("${MainDestinations.ARTICLE_DETAIL_ROUTE}/$snackId")

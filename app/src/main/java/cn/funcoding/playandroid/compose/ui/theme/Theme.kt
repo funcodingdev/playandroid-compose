@@ -75,9 +75,13 @@ fun PlayAndroidTheme(
     val colors = if (darkTheme) DarkColorPalette else LightColorPalette
 
     val sysUiController = rememberSystemUiController()
+    sysUiController.isNavigationBarVisible = false
     SideEffect {
         sysUiController.setSystemBarsColor(
             color = colors.uiBackground.copy(alpha = AlphaNearOpaque)
+        )
+        sysUiController.setStatusBarColor(
+            color = colors.iconPrimary
         )
     }
 
