@@ -1,5 +1,7 @@
 package cn.funcoding.playandroid.compose
 
+import android.app.Application
+import android.content.ContextWrapper
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.SnackbarHost
 import androidx.compose.runtime.Composable
@@ -20,6 +22,17 @@ import cn.funcoding.playandroid.compose.ui.main.addMainGraph
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.insets.systemBarsPadding
+
+private lateinit var INSTANCE: Application
+
+class PlayAndroidApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        INSTANCE = this
+    }
+}
+
+object AppContext : ContextWrapper(INSTANCE)
 
 @Composable
 fun PlayAndroidApp() {

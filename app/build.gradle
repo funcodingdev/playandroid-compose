@@ -83,10 +83,16 @@ dependencies {
     implementation "com.google.accompanist:accompanist-flowlayout:$accompanist_version"
     // Coil
     implementation "io.coil-kt:coil-compose:1.4.0"
+    // Okhttp3
+    def okhttp_version = "4.9.0"
+    implementation "com.squareup.okhttp3:okhttp:${okhttp_version}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okhttp_version}"
     // Retrofit
     def retrofit_version = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    // Cookie
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
     // Test
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-data class Message(val id: Long, @StringRes val messageId: Int)
+data class Message(val id: Long, @StringRes val messageId: Int = 0, val messageText: String? = "")
 
 /**
  * 负责管理 Snackbar 消息以显示在屏幕上的类
@@ -22,6 +22,15 @@ object SnackbarManager {
             currentMessages + Message(
                 id = UUID.randomUUID().mostSignificantBits,
                 messageId = messageTextId
+            )
+        }
+    }
+
+    fun showMessage(messageText: String?) {
+        _messages.update { currentMessages ->
+            currentMessages + Message(
+                id = UUID.randomUUID().mostSignificantBits,
+                messageText = messageText
             )
         }
     }

@@ -52,11 +52,15 @@ class AppStateHolder(
             snackbarManager.messages.collect { currentMessages ->
                 if (currentMessages.isNotEmpty()) {
                     val message = currentMessages[0]
-                    val text = resources.getText(message.messageId)
-
+                    var text = message.messageText
+                    if (text.isNullOrEmpty()) {
+                        text = resources.getText(message.messageId).toString()
+                    }
                     // Display the snackbar on the screen. `showSnackbar` is a function
                     // that suspends until the snackbar disappears from the screen
-                    scaffoldState.snackbarHostState.showSnackbar(text.toString())
+                    if (!text.isNullOrEmpty()) {
+                        scaffoldState.snackbarHostState.showSnackbar(text)
+                    }
                     // Once the snackbar is gone or dismissed, notify the SnackbarManager
                     snackbarManager.setMessageShown(message.id)
                 }
