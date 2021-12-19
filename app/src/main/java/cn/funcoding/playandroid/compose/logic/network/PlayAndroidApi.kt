@@ -14,7 +14,10 @@ object PlayAndroidApi {
 
     suspend fun logout() = accountService.logout()
 
-    private val articleService: ArticleService = ServiceCreator.create()
+    /**
+     *首页相关
+     */
+    private val articleService: HomeArticleService = ServiceCreator.create()
 
-    suspend fun getHomeArticleList(pageIndex: Int) = articleService.getHomeArticleList(pageIndex)
+    suspend fun getArticleList(pageIndex: Int) = articleService.getArticleList(pageIndex)
 }
