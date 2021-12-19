@@ -3,6 +3,8 @@ package cn.funcoding.playandroid.compose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +15,13 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContent {
-            PlayApp()
+            PlayAndroidApp()
         }
     }
+}
+
+@Preview
+@Composable
+private fun PlayAndroidAppPreview() {
+    PlayAndroidApp()
 }
