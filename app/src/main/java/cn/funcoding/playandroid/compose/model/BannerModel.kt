@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.logic.model
+package cn.funcoding.playandroid.compose.model
 
 data class BannerModel(
     val desc: String,

@@ -1,6 +1,6 @@
 package cn.funcoding.playandroid.compose.ui.main.article
 
-import cn.funcoding.playandroid.compose.logic.model.ArticleModel
+import cn.funcoding.playandroid.compose.model.ArticleModel
 import cn.funcoding.playandroid.compose.ui.components.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

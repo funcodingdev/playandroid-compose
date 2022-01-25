@@ -1,8 +1,8 @@
 package cn.funcoding.playandroid.compose.ui.main.article
 
-import cn.funcoding.playandroid.compose.logic.model.ArticleModel
-import cn.funcoding.playandroid.compose.logic.model.PaginationModel
-import cn.funcoding.playandroid.compose.logic.network.PlayAndroidApi
+import cn.funcoding.playandroid.compose.model.ArticleModel
+import cn.funcoding.playandroid.compose.model.PaginationModel
+import cn.funcoding.playandroid.compose.data.network.PlayAndroidApi
 
 class HomeArticleRepo {
 

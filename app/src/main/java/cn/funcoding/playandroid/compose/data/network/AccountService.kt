@@ -1,7 +1,7 @@
-package cn.funcoding.playandroid.compose.logic.network
+package cn.funcoding.playandroid.compose.data.network
 
-import cn.funcoding.playandroid.compose.logic.model.BaseModel
-import cn.funcoding.playandroid.compose.logic.model.LoginModel
+import cn.funcoding.playandroid.compose.model.BaseModel
+import cn.funcoding.playandroid.compose.model.LoginModel
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query

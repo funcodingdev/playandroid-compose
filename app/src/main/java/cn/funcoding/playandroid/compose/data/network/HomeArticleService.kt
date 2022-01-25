@@ -1,6 +1,6 @@
-package cn.funcoding.playandroid.compose.logic.network
+package cn.funcoding.playandroid.compose.data.network
 
-import cn.funcoding.playandroid.compose.logic.model.*
+import cn.funcoding.playandroid.compose.model.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 

@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.logic.network.exception
+package cn.funcoding.playandroid.compose.data.network.exception
 
 import java.lang.RuntimeException
 

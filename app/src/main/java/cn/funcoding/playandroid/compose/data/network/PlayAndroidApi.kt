@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.logic.network
+package cn.funcoding.playandroid.compose.data.network
 
 object PlayAndroidApi {
     /**

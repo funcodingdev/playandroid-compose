@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cn.funcoding.playandroid.compose.R
-import cn.funcoding.playandroid.compose.logic.network.ServiceCreator
-import cn.funcoding.playandroid.compose.logic.network.exception.ApiException
+import cn.funcoding.playandroid.compose.data.network.ServiceCreator
+import cn.funcoding.playandroid.compose.data.network.exception.ApiException
 import cn.funcoding.playandroid.compose.utils.SnackbarManager
 import com.google.gson.JsonParseException
 import com.google.gson.JsonSyntaxException

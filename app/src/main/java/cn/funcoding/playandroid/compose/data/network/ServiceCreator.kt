@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.logic.network
+package cn.funcoding.playandroid.compose.data.network
 
 import cn.funcoding.playandroid.compose.AppContext
 import com.franmontiel.persistentcookiejar.PersistentCookieJar

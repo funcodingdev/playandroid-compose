@@ -1,6 +1,6 @@
-package cn.funcoding.playandroid.compose.logic.model
+package cn.funcoding.playandroid.compose.model
 
-import cn.funcoding.playandroid.compose.logic.network.exception.ApiException
+import cn.funcoding.playandroid.compose.data.network.exception.ApiException
 
 data class BaseModel<T>(
     private val `data`: T,

@@ -1,6 +1,6 @@
 package cn.funcoding.playandroid.compose.ui.main.mine
 
-import cn.funcoding.playandroid.compose.logic.network.PlayAndroidApi
+import cn.funcoding.playandroid.compose.data.network.PlayAndroidApi
 
 object AccountRepo {
 
