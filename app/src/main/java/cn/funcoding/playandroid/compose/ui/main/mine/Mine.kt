@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.ui.main
+package cn.funcoding.playandroid.compose.ui.main.mine
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

@@ -1,5 +1,6 @@
-package cn.funcoding.playandroid.compose.ui.main
+package cn.funcoding.playandroid.compose.ui.main.home
 
+import android.content.res.Configuration
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import cn.funcoding.playandroid.compose.R
 import cn.funcoding.playandroid.compose.utils.SnackbarManager
@@ -16,21 +18,33 @@ import cn.funcoding.playandroid.compose.ui.components.PlayAndroidSurface
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 
 @Composable
-fun Search(
+fun Home(
     onItemClick: (Long) -> Unit,
     modifier: Modifier = Modifier
 ) {
     PlayAndroidSurface(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+
             Text(
-                text = stringResource(id = R.string.search),
+                text = stringResource(id = R.string.home),
                 textAlign = TextAlign.Center,
                 fontSize = 16.sp,
                 color = PlayAndroidTheme.colors.textPrimary,
                 modifier = Modifier.clickable {
-                    SnackbarManager.showMessage(R.string.search)
+                    SnackbarManager.showMessage(R.string.home)
                 }
             )
         }
+    }
+}
+
+@Preview("Home screen")
+@Preview("Home screen (dark)", uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+fun PreviewHome() {
+    PlayAndroidTheme {
+        Home(onItemClick = {
+
+        })
     }
 }

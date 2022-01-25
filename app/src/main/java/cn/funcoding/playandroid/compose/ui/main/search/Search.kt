@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.ui.main
+package cn.funcoding.playandroid.compose.ui.main.search
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -16,19 +16,19 @@ import cn.funcoding.playandroid.compose.ui.components.PlayAndroidSurface
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 
 @Composable
-fun Nav(
+fun Search(
     onItemClick: (Long) -> Unit,
     modifier: Modifier = Modifier
 ) {
     PlayAndroidSurface(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Text(
-                text = stringResource(id = R.string.nav),
+                text = stringResource(id = R.string.search),
                 textAlign = TextAlign.Center,
                 fontSize = 16.sp,
                 color = PlayAndroidTheme.colors.textPrimary,
                 modifier = Modifier.clickable {
-                    SnackbarManager.showMessage(R.string.nav)
+                    SnackbarManager.showMessage(R.string.search)
                 }
             )
         }

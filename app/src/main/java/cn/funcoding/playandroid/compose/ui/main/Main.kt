@@ -41,6 +41,11 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import cn.funcoding.playandroid.compose.R
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidSurface
+import cn.funcoding.playandroid.compose.ui.main.article.Article
+import cn.funcoding.playandroid.compose.ui.main.home.Home
+import cn.funcoding.playandroid.compose.ui.main.mine.Mine
+import cn.funcoding.playandroid.compose.ui.main.nav.Nav
+import cn.funcoding.playandroid.compose.ui.main.search.Search
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 import com.google.accompanist.insets.navigationBarsPadding
 

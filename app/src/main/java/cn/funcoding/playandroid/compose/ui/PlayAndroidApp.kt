@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose
+package cn.funcoding.playandroid.compose.ui
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.SnackbarHost
@@ -12,13 +12,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.navigation
-import cn.funcoding.playandroid.compose.ui.MainDestinations
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidScaffold
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidbar
 import cn.funcoding.playandroid.compose.ui.main.MainSections
 import cn.funcoding.playandroid.compose.ui.main.PlayAndroidButtonBar
 import cn.funcoding.playandroid.compose.ui.main.addMainGraph
-import cn.funcoding.playandroid.compose.ui.rememberAppStateHolder
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.insets.systemBarsPadding
