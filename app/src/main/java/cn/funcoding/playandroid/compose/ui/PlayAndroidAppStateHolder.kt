@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose
+package cn.funcoding.playandroid.compose.ui
 
 import android.content.res.Resources
 import androidx.compose.material.ScaffoldState

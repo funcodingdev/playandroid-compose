@@ -1,7 +1,5 @@
 package cn.funcoding.playandroid.compose
 
-import android.app.Application
-import android.content.ContextWrapper
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.SnackbarHost
 import androidx.compose.runtime.Composable
@@ -14,25 +12,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.navigation
+import cn.funcoding.playandroid.compose.ui.MainDestinations
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidScaffold
 import cn.funcoding.playandroid.compose.ui.components.PlayAndroidbar
 import cn.funcoding.playandroid.compose.ui.main.MainSections
 import cn.funcoding.playandroid.compose.ui.main.PlayAndroidButtonBar
 import cn.funcoding.playandroid.compose.ui.main.addMainGraph
+import cn.funcoding.playandroid.compose.ui.rememberAppStateHolder
 import cn.funcoding.playandroid.compose.ui.theme.PlayAndroidTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.insets.systemBarsPadding
-
-private lateinit var INSTANCE: Application
-
-class PlayAndroidApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        INSTANCE = this
-    }
-}
-
-object AppContext : ContextWrapper(INSTANCE)
 
 @Composable
 fun PlayAndroidApp() {

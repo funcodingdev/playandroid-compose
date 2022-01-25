@@ -1,6 +1,6 @@
-package cn.funcoding.playandroid.compose.data.network
+package cn.funcoding.playandroid.compose.data.datasource.remote
 
-import cn.funcoding.playandroid.compose.model.BaseModel
+import cn.funcoding.playandroid.compose.data.ResponseModel
 import cn.funcoding.playandroid.compose.model.LoginModel
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -15,7 +15,7 @@ interface AccountService {
     suspend fun login(
         @Query("username") username: String,
         @Query("password") password: String
-    ): BaseModel<LoginModel>
+    ): ResponseModel<LoginModel>
 
 
     /**
@@ -26,11 +26,11 @@ interface AccountService {
         @Query("username") username: String,
         @Query("password") password: String,
         @Query("repassword") repassword: String
-    ): BaseModel<LoginModel>
+    ): ResponseModel<LoginModel>
 
     /**
      * 登出
      */
     @GET("user/logout/json")
-    suspend fun logout(): BaseModel<Any>
+    suspend fun logout(): ResponseModel<Any>
 }

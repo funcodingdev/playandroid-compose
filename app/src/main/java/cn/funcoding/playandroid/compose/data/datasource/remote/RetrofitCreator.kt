@@ -1,4 +1,4 @@
-package cn.funcoding.playandroid.compose.data.network
+package cn.funcoding.playandroid.compose.data.datasource.remote
 
 import cn.funcoding.playandroid.compose.AppContext
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
@@ -9,10 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-/**
- * Retrofit创建类
- */
-object ServiceCreator {
+object RetrofitCreator {
     private const val BASE_URL = "https://www.wanandroid.com"
     private val cookiePersistor = SharedPrefsCookiePersistor(AppContext)
     private val cookieJar = PersistentCookieJar(SetCookieCache(), cookiePersistor)

@@ -62,6 +62,7 @@ fun NavGraphBuilder.addMainGraph(
 ) {
     composable(MainSections.HOME.route) { from ->
         Home(
+
             onItemClick = { id -> onItemSelected(id, from) },
             modifier,
         )
